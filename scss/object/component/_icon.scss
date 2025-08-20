@@ -1,0 +1,59 @@
+@use "../../foundation/variables";
+
+
+
+.c-icon__close {
+    position: relative;
+    width: 32px;
+    height: 36px;
+    display: none;
+}
+
+.c-icon__close::before,
+.c-icon__close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 6px;
+    background-color: variables.$color-gray;
+    transform-origin: center;
+}
+
+.c-icon__close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.c-icon__close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.c-icon__arrow {
+    display: flex;
+    width: fit-content;
+    margin: 5px;
+
+    &__right {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-top: 1px solid variables.$color-gray;
+        border-right: 1px solid variables.$color-gray;
+        transform: rotate(-135deg);
+        margin-left: -3px;
+
+    }
+
+    &__left {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-top: 1px solid variables.$color-gray;
+        border-right: 1px solid variables.$color-gray;
+        transform: rotate(45deg);
+        margin-right: -3px;
+    }
+
+}

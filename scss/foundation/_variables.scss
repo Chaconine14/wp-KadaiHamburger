@@ -1,0 +1,53 @@
+//***************************************
+//カラーパレット
+//***************************************
+
+$color-gray: #707070;
+$color-beige: #FFF7EF;
+$color-beige2: #9D8670;
+$color-beige3: #F2EDE9;
+$color-white: #FFF;
+$color-white2: #EAEAEA;
+$color-white3: #FFFDFA;
+$color-brown: #3C2A10;
+
+
+
+
+
+//***************************************
+//フォント設定
+//***************************************
+
+.font-mplus-400 {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
+}
+
+.font-mplus-700 {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 700;
+}
+
+
+.font-roboto {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+
+//***************************************
+//レスポンシブ　メディアクエリ設定
+//***************************************
+
+@mixin media-tb {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-pc {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}

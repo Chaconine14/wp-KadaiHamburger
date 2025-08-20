@@ -1,0 +1,117 @@
+@use "../../foundation/variables";
+
+
+
+.p-side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 328px;
+    min-height: 100vh;
+    background-color: rgb(242, 237, 233);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 4;
+    overflow-y: auto;
+
+
+    @include variables.media-pc {
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+
+    }
+
+
+
+    &.is-open {
+        transform: translateX(0);
+
+        @include variables.media-tb {
+            width: 368px;
+
+        }
+    }
+
+    &.is-close {
+        transform: translateX(100%);
+
+
+        @include variables.media-pc {
+            transform: translateX(0);
+            background-color: variables.$color-beige3;
+            color: variables.$color-gray;
+            position: absolute;
+            width: 368px;
+            height: 100%;
+            z-index: 4;
+
+        }
+
+    }
+
+}
+
+
+
+.p-side-menu__li {
+    font-size: 24px;
+    margin-left: 46px;
+    width: 100%;
+
+    &__wrap {
+        position: absolute;
+        top: 178px;
+        color: variables.$color-gray;
+
+    }
+
+    &__menu {
+        font-size: 20px;
+        margin: 40px auto 60px 8%;
+        line-height: 50px;
+
+        @include variables.media-tb {
+            margin-top: 32px;
+        }
+    }
+
+    &__menu__a {
+        color: variables.$color-gray;
+    }
+
+    &__menu__a:hover {
+        color: variables.$color-white3;
+    }
+
+}
+
+
+
+.p-side-menu__title {
+    display: none;
+
+    @include variables.media-pc {
+        display: block;
+        color: variables.$color-gray;
+        font-size: 34px;
+        position: absolute;
+        top: 84px;
+        right: 234px;
+        margin: 0;
+        z-index: 6;
+    }
+}
+
+
+body.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+
+    @include variables.media-pc {
+        position: relative;
+        overflow-y: auto;
+
+    }
+}

@@ -1,0 +1,25 @@
+@use "../../foundation/variables";
+
+
+
+.p-title {
+    color: variables.$color-gray;
+    padding-top: 43px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 40px;
+
+    @include variables.media-tb {
+
+        padding-top: 40px;
+
+    }
+
+    @include variables.media-pc {
+
+        padding: 5%;
+        font-size: 300%;
+        position: absolute;
+        left: 0;
+    }
+}

@@ -1,0 +1,93 @@
+@use "../../../foundation/variables";
+
+.p-archive-visual {
+
+    background-image: url("../../../img/archive-main-visual-sp.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 285px;
+
+    @include variables.media-tb {
+        background-image: url("../../../../img/archive-visual-tb.png");
+        width: 100vw;
+        height: 285px;
+    }
+
+    @include variables.media-pc {
+        background-image: url("../../../../img/archive-visual-pc.png");
+
+        width: 100%;
+        height: 239px;
+    }
+
+}
+
+
+.p-archive-visual__textwrap {
+    display: flex;
+    align-items: center;
+    padding: 85px;
+    height: 100%;
+
+}
+
+
+.p-archive-visual::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.p-archive-visual__title {
+    position: absolute;
+    top: 106px;
+    left: 37px;
+    font-size: 36px;
+    color: variables.$color-white;
+    z-index: 3;
+
+    @include variables.media-tb {
+        font-size: 60px;
+        position: static;
+
+    }
+
+    @include variables.media-pc {
+        font-size: 60px;
+
+    }
+
+}
+
+
+.p-archive-visual__text {
+    position: absolute;
+    top: 160px;
+    left: 37px;
+    font-size: 16px;
+    color: variables.$color-white;
+    position: absolute;
+    z-index: 3;
+
+    @include variables.media-tb {
+        position: static;
+        margin: 19px;
+
+    }
+
+    @include variables.media-pc {
+        font-size: 16px;
+
+    }
+}

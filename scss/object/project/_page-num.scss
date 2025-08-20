@@ -1,0 +1,87 @@
+@use "../../foundation/variables";
+
+
+
+.p-page-num {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 127px;
+    color: variables.$color-gray;
+
+    @include variables.media-tb {
+        justify-content: center;
+        margin-top: 80px;
+        align-items: center;
+    }
+
+
+
+
+    &__now-page {
+        display: none;
+
+        @include variables.media-tb {
+            display: block;
+            margin: 20px;
+
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        margin: 0;
+        color: variables.$color-gray;
+
+        @include variables.media-tb {
+            display: none;
+
+        }
+
+    }
+}
+
+
+.p-page-num__btn-wrap {
+    display: none;
+
+    @include variables.media-tb {
+        display: flex;
+    }
+}
+
+
+
+.p-page-num__btn {
+    border: 1px solid;
+    padding: 10px 15px;
+    margin: 5px;
+
+
+    color: variables.$color-gray;
+
+
+
+    &__first {
+        background-color: variables.$color-brown;
+        color: variables.$color-white;
+    }
+
+    //ここでホバーした時に色が変わる挙動を書きたい
+    &.is-mouseover {
+        background-color: variables.$color-brown;
+        color: variables.$color-white;
+    }
+
+}
+
+.p-page-num__nav {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+
+
+    @include variables.media-tb {
+        margin: 0;
+    }
+}

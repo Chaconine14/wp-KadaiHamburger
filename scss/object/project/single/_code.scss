@@ -1,0 +1,27 @@
+@use "../../../foundation/variables";
+
+.p-single__code-area {
+    padding: 20px;
+
+    @include variables.media-tb {
+        padding: 60px;
+    }
+
+    @include variables.media-pc {
+        padding: 100px;
+        padding-top: 56px;
+        padding-bottom: 50px;
+    }
+
+    &__pre {
+        background: #F5F5F5;
+        padding: 0 50px;
+        line-height: 25px;
+    }
+
+    &__code {
+        font-size: 16px;
+        color: variables.$color-brown;
+
+    }
+}

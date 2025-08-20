@@ -1,0 +1,51 @@
+@use "../../../foundation/variables";
+
+.p-single__list-area {
+    line-height: 25px;
+
+    @include variables.media-tb {
+        padding-left: 110px;
+    }
+
+    @include variables.media-pc {
+        padding-left: 150px;
+    }
+
+
+    &__li {
+        list-style: auto;
+        list-style-position: inside;
+    }
+
+    &__ol-li {
+        list-style: auto;
+        padding-left: 10px;
+        list-style-position: inside;
+
+        @include variables.media-tb {
+            padding-left: 25px;
+        }
+    }
+
+    &__ul-li {
+        padding-left: 10px;
+
+        @include variables.media-tb {
+            padding-left: 25px;
+        }
+    }
+
+
+    &__wrap {
+        margin: 20px;
+
+        @include variables.media-tb {
+            margin: 0;
+            padding-bottom: 17px;
+        }
+    }
+
+    &__ol {
+        padding-bottom: 30px;
+    }
+}

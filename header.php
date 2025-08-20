@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="img/favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Hamburger</title>
+</head>
+
+<body>
+    <div class="c-container">
+        <?php get_sidebar(); ?>
+
+        <div class="l-main-area">
+            <header class="l-header">
+                <h1 class="p-title font-roboto">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?>
+                    </a>
+                </h1>
+
+
+                <search class="p-search">
+                   <?php get_search_form(); ?>
+                </search>
+
+                <button class="c-menu-btn__sptb">
+                    <span class="js-menu-text font-roboto">Menu</span>
+                    <span class="js-icon__close c-icon__close"></span> <!-- 擬似要素でバツを作る -->
+                </button>
+
+            </header>

@@ -1,0 +1,46 @@
+@use "../../../foundation/variables";
+
+
+.p-single__table-area {
+    padding: 10px 20px 20px 20px;
+
+    @include variables.media-tb {
+        padding: 10px 60px 60px 60px;
+    }
+
+    @include variables.media-pc {
+        padding: 10px 100px 60px 100px;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+        background: variables.$color-white;
+    }
+
+    &__td {
+        border: 1px solid variables.$color-gray;
+        height: 77px;
+        text-align: left;
+        padding-left: 23px;
+        color: variables.$color-brown;
+    }
+
+    &__td-left {
+        width: 140px;
+
+        @include variables.media-tb {
+            width: 210px;
+
+        }
+
+        @include variables.media-pc {
+            width: 429px;
+        }
+    }
+
+    &__td-right {
+        width: auto;
+
+    }
+}

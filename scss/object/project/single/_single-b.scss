@@ -1,0 +1,19 @@
+@use "../../../foundation/variables";
+
+.p-single__b {
+    color: variables.$color-brown;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 70px;
+
+    @include variables.media-tb {
+        padding: 60px;
+    }
+
+    @include variables.media-pc {
+        padding: 100px;
+        padding-top: 60px;
+        margin-bottom: 174px;
+    }
+}

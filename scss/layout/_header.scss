@@ -1,0 +1,20 @@
+@use "../foundation/variables";
+
+.l-header {
+    background-color: variables.$color-beige;
+    height: 215px;
+    position: relative;
+
+    @include variables.media-tb {
+
+        height: 217px;
+
+    }
+
+    @include variables.media-pc {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

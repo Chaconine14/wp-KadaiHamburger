@@ -1,0 +1,95 @@
+@use "../../../foundation/variables";
+
+
+
+.p-main-map {
+    height: auto;
+    width: auto;
+    background: url(../../../../img/map-img.png);
+    margin-top: 49px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    @include variables.media-tb {
+        margin-top: 0;
+        height: auto;
+    }
+
+    @include variables.media-pc {
+        margin-top: 0;
+        height: auto;
+    }
+}
+
+.p-main-map__wrap {
+    padding: 42px;
+}
+
+
+
+.p-main-map__back {
+
+    &__white {
+        background-color: rgba(0, 0, 0, 0.4);
+        height: auto;
+        width: auto;
+
+        @include variables.media-tb {
+            height: auto;
+        }
+
+        @include variables.media-pc {
+            height: auto;
+        }
+
+    }
+
+    &__black {
+        background-color: rgb(0 0 0 / 0.35);
+        height: auto;
+
+        @include variables.media-pc {
+            height: auto;
+            width: 60%;
+        }
+    }
+}
+
+
+.p-main-map__title {
+    color: variables.$color-white;
+    font-size: 30px;
+
+    @include variables.media-pc {
+        margin: 8%;
+    }
+}
+
+.p-main-map__text {
+    color: variables.$color-white;
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    margin-top: 14px;
+    line-height: 33px;
+
+    @include variables.media-pc {
+        margin: 8%;
+    }
+}
+
+
+.p-main-map__title::after {
+    display: block;
+    content: "";
+    width: 75px;
+    height: 2px;
+    background-color: variables.$color-white;
+    margin-top: 15px;
+
+    @include variables.media-pc {
+        margin-top: 8%;
+    }
+}

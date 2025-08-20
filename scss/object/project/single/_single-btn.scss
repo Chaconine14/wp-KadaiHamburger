@@ -1,0 +1,38 @@
+@use "../../../foundation/variables";
+
+.p-single__btn-area {
+    padding: 30px 20px;
+
+    @include variables.media-tb {
+        padding: 0px 60px;
+    }
+
+    @include variables.media-pc {
+        padding: 0px 100px;
+    }
+
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        height: 81px;
+        width: 100%;
+        border: 1px solid variables.$color-gray;
+        border-radius: 20px;
+        color: variables.$color-brown;
+        background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
+
+
+        @include variables.media-tb {
+            margin: 0;
+            height: 104px;
+            width: 429px;
+        }
+    }
+}
+
+
+.p-single__btn-area__btn.is-mouseover {
+    background: variables.$color-gray;
+    transition: 0.3s;
+}

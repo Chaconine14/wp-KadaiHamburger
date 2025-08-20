@@ -1,0 +1,10 @@
+@use "../foundation/variables";
+
+.l-main-area {
+
+    @include variables.media-pc {
+
+        margin-right: 368px;
+        width: calc(100vw - 368px);
+    }
+}
