@@ -7,8 +7,6 @@
         <small class="p-footer__copy font-mplus-400">Copyright: RaiseTech</small>
     </footer>
 
-    <script src="./js/main.js"></script>
-
 </body>
 
 </html>

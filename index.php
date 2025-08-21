@@ -1,7 +1,4 @@
 <?php get_header(); ?> 
-
-
-
             <main class="p-main-visual">
 
                 <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
