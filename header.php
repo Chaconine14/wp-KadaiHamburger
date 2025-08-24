@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.jpg">
-
-    <title>Hamburger</title>
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -16,7 +14,7 @@
         <div class="l-main-area">
             <header class="l-header">
                 <h1 class="p-title font-roboto">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="color:#707070;"><?php bloginfo( 'name' ); ?>
                     </a>
                 </h1>
 
