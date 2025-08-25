@@ -620,30 +620,31 @@ li {
   }
 }
 
-.p-side-menu__li {
+.menu-item-has-children {
   font-size: 24px;
   margin-left: 46px;
   width: 100%;
 }
+
 .p-side-menu__li__wrap {
   position: absolute;
   top: 178px;
   color: #707070;
 }
-.p-side-menu__li__menu {
+.p-side-menu__li__wrap__menu {
   font-size: 20px;
   margin: 40px auto 60px 8%;
   line-height: 50px;
 }
 @media (min-width: 768px) {
-  .p-side-menu__li__menu {
+  .p-side-menu__li__wrap__menu {
     margin-top: 32px;
   }
 }
-.p-side-menu__li__menu__a {
+.p-side-menu__li__wrap__menu__a {
   color: #707070;
 }
-.p-side-menu__li__menu__a:hover {
+.p-side-menu__li__wrap__menu__a:hover {
   color: #FFFDFA;
 }
 
@@ -689,14 +690,17 @@ body.no-scroll {
 .p-footer-link__text {
   color: #FFF;
   font-size: 18px;
+  display: flex;
 }
 @media (min-width: 768px) {
   .p-footer-link__text {
     font-size: 20px;
   }
 }
-
-.p-footer-link__text__hover:hover {
+.p-footer-link__text .menu-item a {
+  color: #FFF;
+}
+.p-footer-link__text .menu-item a:hover {
   color: #3C2A10;
 }
 
@@ -707,11 +711,18 @@ body.no-scroll {
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 @media (min-width: 768px) {
   .p-footer__copy {
     bottom: 24px;
   }
+}
+
+.p-footer-link ul li:not(:last-child)::after {
+  content: "｜";
+  color: #FFF;
+  pointer-events: none;
 }
 
 .p-page-num {

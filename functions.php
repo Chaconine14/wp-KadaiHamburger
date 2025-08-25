@@ -1,4 +1,5 @@
 <?php
+// CSS・JSの読み込み
     function kadaihamburger_script() {
 
         $locale = get_locale();
@@ -9,7 +10,7 @@
             wp_enqueue_style( 'kadaihamburger-roboto', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap', array() );
         }
 
-        wp_enqueue_style( 'kadaihamburger-kadaihamburger', get_theme_file_uri ( '/css/kadaihamburger.css' ), array(), '1.0.0' );
+        wp_enqueue_style( 'kadaihamburger-kadaihamburger', get_theme_file_uri ( '/css/style.css' ), array(), '1.0.0' );
         wp_enqueue_style( 'kadaihamburger-style', get_theme_file_uri ( '/style.css' ), array(), '1.0.0' );
 
         wp_enqueue_script( 'mainjs', get_theme_file_uri ( '/js/main.js' ), array(), '1.0.0', true );
@@ -18,3 +19,14 @@
     }
 
     add_action( 'wp_enqueue_scripts', 'kadaihamburger_script' );
+
+// メニューの登録
+    function kadaihamburger_register_menus() {
+
+        register_nav_menus(array(
+            'footer_menu' => 'フッターメニュー(footer_menu)',
+            'side_menu'   => 'サイドメニュー(side_menu)',
+        ));
+    }
+
+    add_action( 'init', 'kadaihamburger_register_menus' );

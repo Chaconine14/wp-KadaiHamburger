@@ -8,9 +8,7 @@
     padding: 16px;
 
     @include variables.media-tb {
-
         padding: 30px;
-
     }
 }
 
@@ -18,15 +16,21 @@
 .p-footer-link__text {
     color: variables.$color-white;
     font-size: 18px;
+    display: flex;
 
     @include variables.media-tb {
 
         font-size: 20px;
     }
-}
 
-.p-footer-link__text__hover:hover {
-    color: variables.$color-brown;
+    .menu-item a {
+        color: variables.$color-white;
+    }
+
+    .menu-item a:hover {
+        color: variables.$color-brown;
+
+    }
 }
 
 .p-footer__copy {
@@ -36,10 +40,17 @@
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
+    pointer-events: none;
+
 
     @include variables.media-tb {
-
         bottom: 24px;
 
     }
+}
+
+.p-footer-link ul li:not(:last-child)::after {
+    content: "｜";
+    color: variables.$color-white;
+    pointer-events: none;
 }

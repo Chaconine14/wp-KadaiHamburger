@@ -54,17 +54,17 @@
 
 
 
-.p-side-menu__li {
+.menu-item-has-children {
     font-size: 24px;
     margin-left: 46px;
     width: 100%;
+}
 
-    &__wrap {
-        position: absolute;
-        top: 178px;
-        color: variables.$color-gray;
 
-    }
+.p-side-menu__li__wrap {
+    position: absolute;
+    top: 178px;
+    color: variables.$color-gray;
 
     &__menu {
         font-size: 20px;
