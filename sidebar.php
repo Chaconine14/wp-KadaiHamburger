@@ -5,10 +5,11 @@
     <?php
     wp_nav_menu( array(
         'theme_location' => 'side_menu',
-        'menu_class'     => 'p-side-menu__li__wrap',
+        'menu_class'     => 'p-side-menu__li__wrap font-mplus-700',
         'container'      => false,
     ) );
     ?>
+
 </nav>
 
 
