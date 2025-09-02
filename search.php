@@ -1,78 +1,22 @@
 <?php get_header(); ?> 
 
-
     <main class="l-archive">
         <div class="p-archive-visual">
-
-            <picture>
-                <source media="(min-width: 1025px)" srcset="<?php echo get_template_directory_uri(); ?>/img/archive-visual-pc.png">
-                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/archive-visual-tb.png">
-                <img class="p-archive-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/archive-main-visual-sp.png" alt="ハンバーガーの拡大写真">
-            </picture>
             <div class="p-archive-visual__textwrap">
-                <h2 class="p-archive-visual__title font-roboto">Menu:</h2>
+                <h2 class="p-archive-visual__title font-roboto">Search:</h2>
                 <p class="p-archive-visual__text font-mplus-700">チーズバーガー</p>
             </div>
-            
         </div>
 
 
         <section class="p-archive__text-area">
             <h2 class="font-mplus-700 p-archive__text-area__title">小見出しが入ります</h2>
             <p class="font-mplus-400 p-archive__text-area__text">
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
             </p>
         </section>
 
-
-
-
-
-
         <section class="p-archive__card-area">
-
-        <?php if(have_posts()): ?>
-        <?php while(have_posts()): the_post(); ?>
-    <!-- 繰り返し処理する内容 ↓↓↓↓↓-->
-
-<!-- 試しにやってみた↓↓↓↓↓↓ //////////////////////////////////////////-->
-        <a href="<?php the_permalink(); ?>" class="entry-item__thumb">
-            <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail( 'medium', array( 'alt' => get_the_title() ) ); ?>
-            <?php endif; ?>
-        </a>
-
-        
-                    <figure class="p-archive__card-area__card">
-                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
-                <picture class="p-archive__card-area__img-wrap">
-                    <?php the_post_thumbnail(); ?>
-                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
-                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
-                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
-                </picture>
-
-
-                <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2"><?php the_title(); ?></h2>
-                    <h3 class="font-mplus-700 p-archive__card-area__h3"><?php the_content(); ?></h3>
-                    <p class="font-mplus-400 p-archive__card-area__p"></p>
-                    <div class="p-archive__card-area__btn-area">
-                        <a class="font-mplus-700 p-archive__card-area__btn" href="<?php the_permalink(); ?>">詳しく見る</a>
-                    </div>
-
-                </figcaption>
-            </figure>
-
-<!-- 試しにやってみた↑↑↑↑↑↑↑↑ //////////////////////////////////////////-->
-
-
-        <?php endwhile; ?>
-        <?php else: ?>
-        <p>記事が見つかりません</p>
-        <?php endif; ?>
-
-
 
             <figure class="p-archive__card-area__card">
                 <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
@@ -84,7 +28,7 @@
 
 
                 <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2">チーズバーガー</h2>
+                    <h2 class="font-mplus-700 p-archive__card-area__h2">見出しが入ります</h2>
                     <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
                     <p class="font-mplus-400 p-archive__card-area__p">
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -97,56 +41,94 @@
             </figure>
 
 
-              
-            <!-- <figure class="p-archive__card-area__card">
+            <figure class="p-archive__card-area__card">
+                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
                 <picture class="p-archive__card-area__img-wrap">
                     <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
                     <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
                     <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
                 </picture>
 
+
                 <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2">ダブルチーズバーガー</h2>
+                    <h2 class="font-mplus-700 p-archive__card-area__h2">見出しが入ります</h2>
                     <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
                     <p class="font-mplus-400 p-archive__card-area__p">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </p>
                     <div class="p-archive__card-area__btn-area">
                         <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
                     </div>
+
                 </figcaption>
             </figure>
 
             <figure class="p-archive__card-area__card">
+                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
                 <picture class="p-archive__card-area__img-wrap">
                     <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
                     <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
                     <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
                 </picture>
 
+
                 <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2">スペシャルチーズバーガー</h2>
+                    <h2 class="font-mplus-700 p-archive__card-area__h2">見出しが入ります</h2>
                     <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
                     <p class="font-mplus-400 p-archive__card-area__p">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </p>
                     <div class="p-archive__card-area__btn-area">
                         <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
                     </div>
+
                 </figcaption>
-            </figure> -->
+            </figure>
 
+            <figure class="p-archive__card-area__card">
+                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
+                <picture class="p-archive__card-area__img-wrap">
+                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
+                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
+                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
+                </picture>
+
+
+                <figcaption class="p-archive__card-area__text-wrap">
+                    <h2 class="font-mplus-700 p-archive__card-area__h2">見出しが入ります</h2>
+                    <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
+                    <p class="font-mplus-400 p-archive__card-area__p">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </p>
+                    <div class="p-archive__card-area__btn-area">
+                        <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
+                    </div>
+
+                </figcaption>
+            </figure>
+
+            <figure class="p-archive__card-area__card">
+                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
+                <picture class="p-archive__card-area__img-wrap">
+                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
+                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
+                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
+                </picture>
+
+
+                <figcaption class="p-archive__card-area__text-wrap">
+                    <h2 class="font-mplus-700 p-archive__card-area__h2">見出しが入ります</h2>
+                    <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
+                    <p class="font-mplus-400 p-archive__card-area__p">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </p>
+                    <div class="p-archive__card-area__btn-area">
+                        <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
+                    </div>
+
+                </figcaption>
+            </figure>
         </section>
-
-        <!-- 試していますパート2 -->
-<?php
-echo paginate_links(array(
-                        'type' => 'list',
-                        'prev_text' => '&lt;',
-                        'next_text' => '&gt;',
-                    ));
-                ?>
-
-        <!-- 試していますパート2 -->
-
 
 
         <nav class="p-page-num font-roboto">
@@ -174,6 +156,7 @@ echo paginate_links(array(
 
             <div class="p-page-num__nav">
                 <a class="p-page-num__text font-mplus-400" href="#">次へ</a>
+
                 <button class="c-icon__arrow">
                     <span class="c-icon__arrow__left"></span>
                     <span class="c-icon__arrow__left"></span>

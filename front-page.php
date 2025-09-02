@@ -5,7 +5,8 @@
                 <picture>
                     <source media="(min-width: 1025px)" srcset="<?php echo get_template_directory_uri(); ?>/img/mainvisual-pc.png">
                     <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/mainvisual-tb.jpg">
-                    <img class="p-main-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/mainvisual-sp@2x.jpg" alt="テーブル上のハンバーガーや野菜たち">                </picture>
+                    <img class="p-main-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/mainvisual-sp@2x.jpg" alt="テーブル上のハンバーガーや野菜たち">                
+                </picture>
                 <p class="p-main-visual__text font-mplus-700">ダミーサイト</p>
             </main>
 
@@ -62,8 +63,5 @@
                         </div>
                     </div>
             </section>
-
-        </div>
-    </div>
 
 <?php get_footer(); ?>
