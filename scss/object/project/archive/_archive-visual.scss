@@ -1,96 +1,5 @@
 @use "../../../foundation/variables";
 
-// .p-archive-visual {
-
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-
-//     position: relative;
-//     z-index: 1;
-//     width: 100%;
-//     height: 285px;
-
-//     @include variables.media-tb {
-//         width: 100vw;
-//         height: 285px;
-//     }
-
-//     @include variables.media-pc {
-
-//         width: 100%;
-//         height: 239px;
-//     }
-
-// }
-
-
-// .p-archive-visual__textwrap {
-//     display: flex;
-//     align-items: center;
-//     padding: 85px;
-//     height: 100%;
-
-// }
-
-
-// .p-archive-visual::after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.4);
-//     z-index: 2;
-// }
-
-// .p-archive-visual__title {
-//     position: absolute;
-//     top: 106px;
-//     left: 37px;
-//     font-size: 36px;
-//     color: variables.$color-white;
-//     z-index: 3;
-
-//     @include variables.media-tb {
-//         font-size: 60px;
-//         position: static;
-
-//     }
-
-//     @include variables.media-pc {
-//         font-size: 60px;
-
-//     }
-
-// }
-
-
-// .p-archive-visual__text {
-//     position: absolute;
-//     top: 160px;
-//     left: 37px;
-//     font-size: 16px;
-//     color: variables.$color-white;
-//     position: absolute;
-//     z-index: 3;
-
-//     @include variables.media-tb {
-//         position: static;
-//         margin: 19px;
-
-//     }
-
-//     @include variables.media-pc {
-//         font-size: 16px;
-
-//     }
-// }
-
-/////////////////
-
-
 .p-archive-visual {
     position: relative;
     width: 100%;
@@ -129,7 +38,6 @@
 .p-archive-visual__textwrap {
     position: absolute;
     top: 0;
-    left: 37px;
     z-index: 3;
     display: flex;
     justify-content: center;
@@ -140,7 +48,6 @@
 
     @include variables.media-tb {
         justify-content: flex-start;
-        left: 86px;
     }
 }
 
@@ -151,10 +58,12 @@
     color: variables.$color-white;
     position: absolute;
     left: 0;
+    padding-left: 37px;
 
     @include variables.media-tb {
         font-size: 60px;
         position: static;
+        padding-left: 86px;
     }
 
     @include variables.media-pc {
@@ -165,13 +74,13 @@
 
 .p-archive-visual__text {
     top: 160px;
-    left: 37px;
     font-size: 16px;
     color: variables.$color-white;
     position: absolute;
     z-index: 3;
     left: 0;
     padding-top: 10px;
+    padding-left: 37px;
 
     @include variables.media-tb {
         position: static;

@@ -26,113 +26,40 @@
 
 
 
-
-
-
         <section class="p-archive__card-area">
+            <?php if(have_posts()): ?>
+            <?php while(have_posts()): the_post(); ?>
 
-        <?php if(have_posts()): ?>
-        <?php while(have_posts()): the_post(); ?>
-    <!-- 繰り返し処理する内容 ↓↓↓↓↓-->
-
-<!-- 試しにやってみた↓↓↓↓↓↓ //////////////////////////////////////////-->
-        <a href="<?php the_permalink(); ?>" class="entry-item__thumb">
-            <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail( 'medium', array( 'alt' => get_the_title() ) ); ?>
-            <?php endif; ?>
-        </a>
-
-        
-                    <figure class="p-archive__card-area__card">
-                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
+            <figure class="p-archive__card-area__card">
                 <picture class="p-archive__card-area__img-wrap">
-                    <?php the_post_thumbnail(); ?>
-                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
-                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
-                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
-                </picture>
 
+                    <?php
+                        $thumbnail_id = get_post_thumbnail_id( get_the_ID() );// アイキャッチ画像のIDを取得
+                        $alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );// 代替テキスト（alt属性）を取得
+                        $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );// アイキャッチ画像のURLを取得（フルサイズで！）
+                    ?>
+
+                    <?php if ( $thumbnail_url ) : ?>
+                    <img class="p-archive__card-area__img" 
+                        src="<?php echo esc_url( $thumbnail_url ); ?>" 
+                        alt="<?php echo esc_attr( $alt ); ?>">
+                    <?php endif; ?>
+
+                </picture>
 
                 <figcaption class="p-archive__card-area__text-wrap">
                     <h2 class="font-mplus-700 p-archive__card-area__h2"><?php the_title(); ?></h2>
-                    <h3 class="font-mplus-700 p-archive__card-area__h3"><?php the_content(); ?></h3>
-                    <p class="font-mplus-400 p-archive__card-area__p"></p>
+                    <?php the_content(); ?>
                     <div class="p-archive__card-area__btn-area">
                         <a class="font-mplus-700 p-archive__card-area__btn" href="<?php the_permalink(); ?>">詳しく見る</a>
                     </div>
-
                 </figcaption>
             </figure>
 
-<!-- 試しにやってみた↑↑↑↑↑↑↑↑ //////////////////////////////////////////-->
-
-
-        <?php endwhile; ?>
-        <?php else: ?>
-        <p>記事が見つかりません</p>
-        <?php endif; ?>
-
-
-
-            <figure class="p-archive__card-area__card">
-                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
-                <picture class="p-archive__card-area__img-wrap">
-                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
-                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
-                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
-                </picture>
-
-
-                <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2">チーズバーガー</h2>
-                    <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
-                    <p class="font-mplus-400 p-archive__card-area__p">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    </p>
-                    <div class="p-archive__card-area__btn-area">
-                        <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
-                    </div>
-
-                </figcaption>
-            </figure>
-
-
-              
-            <!-- <figure class="p-archive__card-area__card">
-                <picture class="p-archive__card-area__img-wrap">
-                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
-                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
-                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
-                </picture>
-
-                <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2">ダブルチーズバーガー</h2>
-                    <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
-                    <p class="font-mplus-400 p-archive__card-area__p">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <div class="p-archive__card-area__btn-area">
-                        <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
-                    </div>
-                </figcaption>
-            </figure>
-
-            <figure class="p-archive__card-area__card">
-                <picture class="p-archive__card-area__img-wrap">
-                    <source media="(min-width: 1025px)" srcset="./img/archive-card-pc.png">
-                    <source media="(min-width: 768px)" srcset="./img/archive-card-tb.png">
-                    <img class="p-archive__card-area__img" src="./img/archive-card-sp.png" alt="窓辺のハンバーガー">
-                </picture>
-
-                <figcaption class="p-archive__card-area__text-wrap">
-                    <h2 class="font-mplus-700 p-archive__card-area__h2">スペシャルチーズバーガー</h2>
-                    <h3 class="font-mplus-700 p-archive__card-area__h3">小見出しが入ります</h3>
-                    <p class="font-mplus-400 p-archive__card-area__p">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <div class="p-archive__card-area__btn-area">
-                        <a class="font-mplus-700 p-archive__card-area__btn" href="#">詳しく見る</a>
-                    </div>
-                </figcaption>
-            </figure> -->
+            <?php endwhile; ?>
+            <?php else: ?>
+                <p>記事が見つかりません</p>
+            <?php endif; ?>
 
         </section>
 

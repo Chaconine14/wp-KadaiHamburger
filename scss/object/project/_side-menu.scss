@@ -51,34 +51,6 @@
 }
 
 
-.menu-item-has-children {
-    font-size: 24px;
-    margin-left: 46px;
-    width: 100%;
-
-    a {
-        color: variables.$color-gray;
-    }
-
-    a:hover {
-        color: variables.$color-white3;
-    }
-
-    .sub-menu {
-        font-family: "M PLUS 1p", sans-serif;
-        font-weight: 400;
-
-        //ここ追記
-        font-size: 20px;
-        margin: 40px auto 60px 8%;
-        line-height: 50px;
-
-        @include variables.media-tb {
-            margin-top: 32px;
-        }
-    }
-}
-
 
 .p-side-menu__title {
     display: none;

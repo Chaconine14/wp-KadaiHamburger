@@ -1,0 +1,65 @@
+@use "./variables";
+
+
+//front-page.php-------------------------------------------
+
+.p-side-menu {
+    .menu-item-has-children {
+        font-size: 24px;
+        margin-left: 46px;
+        width: 100%;
+
+        a {
+            color: variables.$color-gray;
+        }
+
+        a:hover {
+            color: variables.$color-white3;
+        }
+
+    }
+}
+
+.p-side-menu {
+    .sub-menu {
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        margin: 40px auto 60px 8%;
+        line-height: 50px;
+
+        @include variables.media-tb {
+            margin-top: 32px;
+        }
+    }
+}
+
+
+//archive.php-------------------------------------------
+
+.p-archive__card-area__text-wrap {
+
+    .wp-block-heading {
+        font-size: 16px;
+        padding: 21px 0 7px 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 400;
+    }
+
+    h3,
+    h4,
+    .wp-block-quote,
+    .wp-block-image,
+    .wp-block-media-text,
+    .wp-block-gallery,
+    .wp-block-list,
+    .wp-block-table {
+        display: none;
+    }
+
+}

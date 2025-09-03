@@ -358,6 +358,52 @@ li {
   list-style: none;
 }
 
+.p-side-menu .menu-item-has-children {
+  font-size: 24px;
+  margin-left: 46px;
+  width: 100%;
+}
+.p-side-menu .menu-item-has-children a {
+  color: #707070;
+}
+.p-side-menu .menu-item-has-children a:hover {
+  color: #FFFDFA;
+}
+
+.p-side-menu .sub-menu {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 40px auto 60px 8%;
+  line-height: 50px;
+}
+@media (min-width: 768px) {
+  .p-side-menu .sub-menu {
+    margin-top: 32px;
+  }
+}
+
+.p-archive__card-area__text-wrap .wp-block-heading {
+  font-size: 16px;
+  padding: 21px 0 7px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.p-archive__card-area__text-wrap p {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+}
+.p-archive__card-area__text-wrap h3,
+.p-archive__card-area__text-wrap h4,
+.p-archive__card-area__text-wrap .wp-block-quote,
+.p-archive__card-area__text-wrap .wp-block-image,
+.p-archive__card-area__text-wrap .wp-block-media-text,
+.p-archive__card-area__text-wrap .wp-block-gallery,
+.p-archive__card-area__text-wrap .wp-block-list,
+.p-archive__card-area__text-wrap .wp-block-table {
+  display: none;
+}
+
 @media (min-width: 1025px) {
   .l-main-area {
     margin-right: 368px;
@@ -624,30 +670,6 @@ li {
   position: absolute;
   top: 178px;
   color: #707070;
-}
-
-.menu-item-has-children {
-  font-size: 24px;
-  margin-left: 46px;
-  width: 100%;
-}
-.menu-item-has-children a {
-  color: #707070;
-}
-.menu-item-has-children a:hover {
-  color: #FFFDFA;
-}
-.menu-item-has-children .sub-menu {
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  margin: 40px auto 60px 8%;
-  line-height: 50px;
-}
-@media (min-width: 768px) {
-  .menu-item-has-children .sub-menu {
-    margin-top: 32px;
-  }
 }
 
 .p-side-menu__title {
@@ -1125,7 +1147,6 @@ body.no-scroll {
 .p-archive-visual__textwrap {
   position: absolute;
   top: 0;
-  left: 37px;
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -1137,7 +1158,6 @@ body.no-scroll {
 @media (min-width: 768px) {
   .p-archive-visual__textwrap {
     justify-content: flex-start;
-    left: 86px;
   }
 }
 
@@ -1146,11 +1166,13 @@ body.no-scroll {
   color: #FFF;
   position: absolute;
   left: 0;
+  padding-left: 37px;
 }
 @media (min-width: 768px) {
   .p-archive-visual__title {
     font-size: 60px;
     position: static;
+    padding-left: 86px;
   }
 }
 @media (min-width: 1025px) {
@@ -1161,13 +1183,13 @@ body.no-scroll {
 
 .p-archive-visual__text {
   top: 160px;
-  left: 37px;
   font-size: 16px;
   color: #FFF;
   position: absolute;
   z-index: 3;
   left: 0;
   padding-top: 10px;
+  padding-left: 37px;
 }
 @media (min-width: 768px) {
   .p-archive-visual__text {
@@ -1328,11 +1350,6 @@ body.no-scroll {
   .p-archive__card-area__h3 {
     font-size: 24px;
   }
-}
-.p-archive__card-area__p {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 .p-archive__card-area__btn {
   font-size: 16px;
