@@ -404,6 +404,37 @@ li {
   display: none;
 }
 
+.page-numbers {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  display: none;
+}
+@media (min-width: 768px) {
+  .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 127px;
+    color: #707070;
+    gap: 10px;
+  }
+}
+
+.page-numbers.prev,
+.page-numbers.next {
+  display: block;
+}
+
+.current {
+  background-color: #3C2A10;
+  color: #FFF;
+}
+
+.current:hover {
+  background-color: #3C2A10;
+  color: #FFF;
+}
+
 @media (min-width: 1025px) {
   .l-main-area {
     margin-right: 368px;
