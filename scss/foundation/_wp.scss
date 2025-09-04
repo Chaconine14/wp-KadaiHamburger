@@ -67,36 +67,100 @@
 
 //　ページネーションのエリア------------
 
-
-.page-numbers {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    display: none; // まず全部消す
+.wp-pagenavi {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 127px;
+    color: variables.$color-gray;
+    border: none;
+    padding: 30px;
 
     @include variables.media-tb {
-        display: flex;
         justify-content: center;
-        align-items: flex-end;
-        height: 127px;
-        color: variables.$color-gray;
-        gap: 10px;
+        margin-top: 80px;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
 
     }
 
+
+    .pages {
+        display: none;
+
+        @include variables.media-tb {
+            display: block;
+            border: none;
+            margin-right: 20px;
+        }
+    }
+
+    .page,
+    .current {
+        display: none;
+
+        @include variables.media-tb {
+            display: block;
+
+            border: 1px solid;
+            padding: 10px 15px;
+            margin: 5px;
+            color: variables.$color-gray;
+        }
+    }
+
+
+    .current,
+    .page:hover {
+        @include variables.media-tb {
+            background-color: #3C2A10;
+            color: #FFF;
+        }
+    }
+
+    //ネストすることで詳細度をあえて上げている
+    .previouspostslink,
+    .nextpostslink {
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: variables.$color-gray;
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        @include variables.media-tb {
+            font-size: 0; //中の文字を消している
+            position: relative;
+
+        }
+    }
 }
 
-.page-numbers.prev,
-.page-numbers.next {
-    display: block;
+.previouspostslink::before {
+    content: "<<";
+    font-size: 0; //中の文字を消している
+
+    @include variables.media-tb {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+}
+
+.nextpostslink::after {
+    content: ">>";
+    font-size: 0; //中の文字を消している
+
+    @include variables.media-tb {
+        font-size: 24px;
+        margin-left: 10px;
+    }
 }
 
 
-.current {
-    background-color: variables.$color-brown;
-    color: variables.$color-white;
-}
-
-.current:hover {
-    background-color: variables.$color-brown;
-    color: variables.$color-white;
+.pages::before {
+    @include variables.media-tb {
+        content: "page ";
+    }
 }

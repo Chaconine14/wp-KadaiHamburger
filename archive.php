@@ -63,34 +63,7 @@
 
         </section>
 
-        <!-- 試していますパート2 -->
-         <nav class="p-page-num font-roboto">
-            <p class="p-page-num__now-page">page 1/10</p>
-
-            <?php echo paginate_links(array(
-                'type' => 'list',
-                'show_all' => true,
-                'prev_text' => '
-                    <div class="p-page-num__nav">
-                        <button class="c-icon__arrow">
-                            <span class="c-icon__arrow__right"></span>
-                            <span class="c-icon__arrow__right"></span>
-                        </button>
-                        <span class="p-page-num__text font-mplus-400">前へ</span>
-                    </div>',
-                'next_text' => '
-                    <div class="p-page-num__nav">
-                        <span class="p-page-num__text font-mplus-400">次へ</span>
-                        <button class="c-icon__arrow">
-                            <span class="c-icon__arrow__left"></span>
-                            <span class="c-icon__arrow__left"></span>
-                        </button>
-                    </div>',
-                ));
-            ?>
-        </nav>
-
-
+        <?php wp_pagenavi(); ?>
 
         <!-- <nav class="p-page-num font-roboto">
             <p class="p-page-num__now-page">page 1/10</p>

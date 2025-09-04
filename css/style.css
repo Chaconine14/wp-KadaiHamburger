@@ -404,35 +404,99 @@ li {
   display: none;
 }
 
-.page-numbers {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+.wp-pagenavi {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 127px;
+  color: #707070;
+  border: none;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .wp-pagenavi {
+    justify-content: center;
+    margin-top: 80px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+}
+.wp-pagenavi .pages {
   display: none;
 }
 @media (min-width: 768px) {
-  .page-numbers {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 127px;
+  .wp-pagenavi .pages {
+    display: block;
+    border: none;
+    margin-right: 20px;
+  }
+}
+.wp-pagenavi .page,
+.wp-pagenavi .current {
+  display: none;
+}
+@media (min-width: 768px) {
+  .wp-pagenavi .page,
+.wp-pagenavi .current {
+    display: block;
+    border: 1px solid;
+    padding: 10px 15px;
+    margin: 5px;
     color: #707070;
-    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .wp-pagenavi .current,
+.wp-pagenavi .page:hover {
+    background-color: #3C2A10;
+    color: #FFF;
+  }
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #707070;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    font-size: 0;
+    position: relative;
   }
 }
 
-.page-numbers.prev,
-.page-numbers.next {
-  display: block;
+.previouspostslink::before {
+  content: "<<";
+  font-size: 0;
+}
+@media (min-width: 768px) {
+  .previouspostslink::before {
+    font-size: 24px;
+    margin-right: 10px;
+  }
 }
 
-.current {
-  background-color: #3C2A10;
-  color: #FFF;
+.nextpostslink::after {
+  content: ">>";
+  font-size: 0;
+}
+@media (min-width: 768px) {
+  .nextpostslink::after {
+    font-size: 24px;
+    margin-left: 10px;
+  }
 }
 
-.current:hover {
-  background-color: #3C2A10;
-  color: #FFF;
+@media (min-width: 768px) {
+  .pages::before {
+    content: "page ";
+  }
 }
 
 @media (min-width: 1025px) {
@@ -628,7 +692,7 @@ li {
 }
 
 .p-search__btn:hover {
-  background: #707070;
+  background: darkgray;
   color: #EAEAEA;
   transition: 0.3s;
 }
@@ -1404,7 +1468,7 @@ body.no-scroll {
   }
 }
 .p-archive__card-area__btn.is-mouseover {
-  background-color: #707070;
+  background-color: darkgray;
   color: #FFF;
   transition: 0.3s;
 }
