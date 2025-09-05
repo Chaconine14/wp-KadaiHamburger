@@ -65,6 +65,15 @@
 
 }
 
+.p-archive__card-area {
+
+    //投稿が見つからなかった時のpタグテキスト用
+    p {
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 400;
+    }
+}
+
 //　ページネーションのエリア------------
 
 .wp-pagenavi {

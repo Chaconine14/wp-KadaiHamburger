@@ -404,6 +404,11 @@ li {
   display: none;
 }
 
+.p-archive__card-area p {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+}
+
 .wp-pagenavi {
   display: flex;
   justify-content: space-around;
