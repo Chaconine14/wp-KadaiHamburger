@@ -3,14 +3,18 @@
 .p-archive__card-area {
     width: auto;
     height: 100%;
+    padding: 0 22px;
 
     @include variables.media-tb {
         width: 100%;
         height: auto;
+        padding: 0 40px;
     }
 
     @include variables.media-pc {
         padding: 0 100px;
+        min-height: 500px;
+
     }
 
     &__card {
