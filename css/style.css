@@ -761,7 +761,7 @@ li {
     background-color: #F2EDE9;
     color: #707070;
     width: 368px;
-    height: 100%;
+    height: auto;
   }
 }
 
