@@ -8,8 +8,11 @@
         flex-direction: row-reverse;
         height: auto;
         position: relative;
+        align-items: stretch;
+        // min-height: 100vh;
     }
 }
+
 
 .c-container::before {
     content: '';
@@ -19,7 +22,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(128, 128, 128, 0.7);
-    z-index: 3;
+    z-index: 4;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease; //フェードイン！

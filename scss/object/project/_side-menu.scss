@@ -16,8 +16,9 @@
 
     @include variables.media-pc {
         overflow: hidden;
-        position: absolute;
-        height: 100%;
+        position: static;
+        height: auto;
+        flex: 0 0 368px;
     }
 
     &.is-open {
@@ -35,10 +36,8 @@
             transform: translateX(0);
             background-color: variables.$color-beige3;
             color: variables.$color-gray;
-            position: absolute;
             width: 368px;
             height: 100%;
-            z-index: 4;
         }
     }
 }
@@ -49,7 +48,6 @@
     top: 178px;
     color: variables.$color-gray;
 }
-
 
 
 .p-side-menu__title {
