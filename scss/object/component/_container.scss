@@ -6,10 +6,10 @@
     @include variables.media-pc {
         display: flex;
         flex-direction: row-reverse;
-        height: auto;
+        height: 100%;
         position: relative;
         align-items: stretch;
-        // min-height: 100vh;
+        min-height: 100%;
     }
 }
 
@@ -30,6 +30,7 @@
 
     @include variables.media-pc {
         display: none;
+        visibility: visible;
     }
 }
 

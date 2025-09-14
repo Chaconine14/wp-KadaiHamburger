@@ -15,10 +15,11 @@
     overflow-y: auto;
 
     @include variables.media-pc {
-        overflow: hidden;
+        overflow: visible;
         position: static;
-        height: auto;
+        height: 100%;
         flex: 0 0 368px;
+        min-height: 100%;
     }
 
     &.is-open {
@@ -37,7 +38,7 @@
             background-color: variables.$color-beige3;
             color: variables.$color-gray;
             width: 368px;
-            height: auto;
+            height: 100%;
         }
     }
 }

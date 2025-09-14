@@ -343,7 +343,6 @@ body {
 
 body {
   background-color: #FFF7EF;
-  height: 100%;
 }
 
 a {
@@ -542,9 +541,10 @@ li {
   .c-container {
     display: flex;
     flex-direction: row-reverse;
-    height: auto;
+    height: 100%;
     position: relative;
     align-items: stretch;
+    min-height: 100%;
   }
 }
 
@@ -564,6 +564,7 @@ li {
 @media (min-width: 1025px) {
   .c-container::before {
     display: none;
+    visibility: visible;
   }
 }
 
@@ -738,10 +739,11 @@ li {
 }
 @media (min-width: 1025px) {
   .p-side-menu {
-    overflow: hidden;
+    overflow: visible;
     position: static;
-    height: auto;
+    height: 100%;
     flex: 0 0 368px;
+    min-height: 100%;
   }
 }
 .p-side-menu.is-open {
@@ -761,7 +763,7 @@ li {
     background-color: #F2EDE9;
     color: #707070;
     width: 368px;
-    height: auto;
+    height: 100%;
   }
 }
 
