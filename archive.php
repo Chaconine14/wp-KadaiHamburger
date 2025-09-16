@@ -10,7 +10,7 @@
             </picture>
             <div class="p-archive-visual__textwrap">
                 <h2 class="p-archive-visual__title font-roboto">Menu:</h2>
-                <p class="p-archive-visual__text font-mplus-700">チーズバーガー</p>
+                <p class="p-archive-visual__text font-mplus-700"><?php single_cat_title(); ?></p>
             </div>
             
         </div>
@@ -61,5 +61,8 @@
 
         <?php wp_pagenavi(); ?>
     </main>
+        <!-- このdiv閉じタグ二つを足しています -->
+            </div>
+            </div>
 
 <?php get_footer(); ?>

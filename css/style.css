@@ -336,7 +336,7 @@ progress {
 
 html,
 body {
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -359,7 +359,7 @@ li {
 
 .p-side-menu .menu-item-has-children {
   font-size: 24px;
-  margin-left: 46px;
+  padding-left: 46px;
   width: 100%;
 }
 .p-side-menu .menu-item-has-children a {
@@ -414,13 +414,14 @@ li {
   align-items: flex-end;
   height: 127px;
   color: #707070;
+  background-color: #FFFDFA;
   border: none;
   padding: 30px;
 }
 @media (min-width: 768px) {
   .wp-pagenavi {
     justify-content: center;
-    margin-top: 80px;
+    margin-top: auto;
     align-items: center;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -474,6 +475,11 @@ li {
     position: relative;
   }
 }
+.wp-pagenavi .extend,
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+  display: none;
+}
 
 .previouspostslink::before {
   content: "<<";
@@ -503,6 +509,11 @@ li {
   }
 }
 
+.l-main-area {
+  background-color: #FFFDFA;
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 1025px) {
   .l-main-area {
     flex: 1;
@@ -541,10 +552,9 @@ li {
   .c-container {
     display: flex;
     flex-direction: row-reverse;
-    height: 100%;
+    height: auto;
     position: relative;
     align-items: stretch;
-    min-height: 100%;
   }
 }
 
@@ -741,9 +751,8 @@ li {
   .p-side-menu {
     overflow: visible;
     position: static;
-    height: 100%;
+    height: auto;
     flex: 0 0 368px;
-    min-height: 100%;
   }
 }
 .p-side-menu.is-open {
@@ -763,7 +772,7 @@ li {
     background-color: #F2EDE9;
     color: #707070;
     width: 368px;
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -771,6 +780,12 @@ li {
   position: absolute;
   top: 178px;
   color: #707070;
+}
+@media (min-width: 1025px) {
+  .p-side-menu__li__wrap {
+    position: static;
+    padding-top: 178px;
+  }
 }
 
 .p-side-menu__title {

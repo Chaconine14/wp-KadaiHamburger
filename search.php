@@ -60,8 +60,15 @@
 
         </section>
 
-        <?php wp_pagenavi(); ?>
-        
     </main>
+
+<!-- メインタグの外側に移動してみた -->
+    <?php wp_pagenavi(); ?>
+
+
+
+    <!-- このdiv閉じタグ二つを足しています -->
+            </div>
+            </div>
 
 <?php get_footer(); ?>

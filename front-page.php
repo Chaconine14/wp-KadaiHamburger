@@ -63,5 +63,8 @@
                         </div>
                     </div>
             </section>
+                <!-- このdiv閉じタグ二つを足しています -->
+            </div>
+            </div>
 
 <?php get_footer(); ?>

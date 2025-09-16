@@ -17,9 +17,8 @@
     @include variables.media-pc {
         overflow: visible;
         position: static;
-        height: 100%;
+        height: auto;
         flex: 0 0 368px;
-        min-height: 100%;
     }
 
     &.is-open {
@@ -38,7 +37,7 @@
             background-color: variables.$color-beige3;
             color: variables.$color-gray;
             width: 368px;
-            height: 100%;
+            height: auto;
         }
     }
 }
@@ -48,6 +47,11 @@
     position: absolute;
     top: 178px;
     color: variables.$color-gray;
+
+    @include variables.media-pc {
+        position: static;
+        padding-top: 178px;
+    }
 }
 
 

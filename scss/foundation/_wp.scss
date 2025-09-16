@@ -6,7 +6,7 @@
 .p-side-menu {
     .menu-item-has-children {
         font-size: 24px;
-        margin-left: 46px;
+        padding-left: 46px;
         width: 100%;
 
         a {
@@ -82,17 +82,19 @@
     align-items: flex-end;
     height: 127px;
     color: variables.$color-gray;
+    background-color: variables.$color-white3;
     border: none;
     padding: 30px;
 
     @include variables.media-tb {
         justify-content: center;
-        margin-top: 80px;
+        margin-top: auto;
         align-items: center;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
 
     }
+
 
 
     .pages {
@@ -144,6 +146,12 @@
             position: relative;
 
         }
+    }
+
+    .extend,
+    .first,
+    .last {
+        display: none;
     }
 }
 

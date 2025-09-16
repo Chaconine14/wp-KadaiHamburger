@@ -6,10 +6,9 @@
     @include variables.media-pc {
         display: flex;
         flex-direction: row-reverse;
-        height: 100%;
+        height: auto;
         position: relative;
         align-items: stretch;
-        min-height: 100%;
     }
 }
 
