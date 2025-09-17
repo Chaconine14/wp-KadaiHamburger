@@ -1,87 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="img/favicon.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <title>Hamburger</title>
-</head>
-
-<body>
-    <div class="c-container">
-        <nav class="p-side-menu is-close">
-            <h2 class="p-side-menu__title font-roboto">
-                <a class="p-side-menu__li__menu__a" href="#">Menu</a>
-            </h2>
-
-            <ul class="p-side-menu__li__wrap">
-                <li class="p-side-menu__li font-mplus-700">
-                    <a class="p-side-menu__li__menu__a" href="#">バーガー</a>
-
-                    <ul class="p-side-menu__li__menu font-mplus-400">
-                        <li><a class="p-side-menu__li__menu__a" href="#">ハンバーガー</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">チーズバーガー</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">テリヤキバーガー</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">アボカドバーガー</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">フィッシュバーガー</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">ベーコンバーガー</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">チキンバーガー</a></li>
-                    </ul>
-                </li>
-
-                <li class="p-side-menu__li font-mplus-700">
-                    <a class="p-side-menu__li__menu__a" href="#">サイド</a>
-                    <ul class="p-side-menu__li__menu font-mplus-400">
-                        <li><a class="p-side-menu__li__menu__a" href="#">ポテト</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">サラダ</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">ナゲット</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">コーン</a></li>
-                    </ul>
-                </li>
-
-                <li class="p-side-menu__li font-mplus-700">
-                    <a class="p-side-menu__li__menu__a" href="#">ドリンク</a>
-                    <ul class="p-side-menu__li__menu font-mplus-400">
-                        <li><a class="p-side-menu__li__menu__a" href="#"><a class="p-side-menu__li__menu__a"
-                                    href="#">コーラ</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">ファンタ</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">オレンジ</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">アップル</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">紅茶（Ice/Hot）</a></li>
-                        <li><a class="p-side-menu__li__menu__a" href="#">コーヒー（Ice/Hot）</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
-
-        <div class="l-main-area">
-            <header class="l-header">
-                <h1 class="p-title font-roboto">Hamburger</h1>
-                <search class="p-search">
-                    <form class="p-search__form" action="#">
-                        <input class="p-search__input" type="search" />
-                        <button class="p-search__btn font-mplus-700" type="submit">検索</button>
-                    </form>
-                </search>
-
-                <button class="c-menu-btn__sptb">
-                    <span class="js-menu-text font-roboto">Menu</span>
-                    <span class="js-icon__close c-icon__close"></span>
-                </button>
-
-            </header>
-
+<?php get_header(); ?> 
 
             <main class="p-single-visual">
 
@@ -254,19 +171,7 @@
 
         </div>
     </div>
+            </div>
+            </div>
 
-    <footer class="l-footer">
-        <div class="p-footer-link font-mplus-400">
-            <a href="" class="p-footer-link__text p-footer-link__text__hover">ショップ情報</a>
-            <p class="p-footer-link__text">｜</p>
-            <a href="" class="p-footer-link__text p-footer-link__text__hover">ヒストリー</a>
-        </div>
-        <small class="p-footer__copy font-mplus-400">Copyright: RaiseTech</small>
-    </footer>
-
-    <script src="./js/main.js"></script>
-    <script src="./js/single.js"></script>
-
-</body>
-
-</html>
+<?php get_footer(); ?>

@@ -37,9 +37,11 @@
                     ?>
 
                     <?php if ( $thumbnail_url ) : ?>
-                    <img class="p-archive__card-area__img" 
-                        src="<?php echo esc_url( $thumbnail_url ); ?>" 
-                        alt="<?php echo esc_attr( $alt ); ?>">
+                        <img class="p-archive__card-area__img" 
+                            src="<?php echo esc_url( $thumbnail_url ); ?>" 
+                            alt="<?php echo esc_attr( $alt ); ?>">
+                    <?php else: ?>
+                        <img class="p-archive__card-area__img" src="<?php echo get_template_directory_uri(); ?>/img/noimage.png" alt="no imageという文字">
                     <?php endif; ?>
 
                 </picture>
@@ -62,12 +64,8 @@
 
     </main>
 
-<!-- メインタグの外側に移動してみた -->
     <?php wp_pagenavi(); ?>
 
-
-
-    <!-- このdiv閉じタグ二つを足しています -->
             </div>
             </div>
 
