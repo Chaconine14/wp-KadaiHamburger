@@ -25,9 +25,10 @@
         position: absolute;
         top: 93px;
         left: 25px;
-        font-size: 36px;
+        font-size: 1.8rem;
         color: variables.$color-white;
         z-index: 2;
+        background-color: rgba(variables.$color-brown, 0.5);
 
         @include variables.media-tb {
             font-size: 60px;
