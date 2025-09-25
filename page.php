@@ -1,15 +1,24 @@
 <?php get_header(); ?> 
+    <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
             <main class="p-single-visual">
-
-                <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
                 <picture>
-                    <source media="(min-width: 1025px)" srcset="./img/shop-visual_pc.png">
-                    <source media="(min-width: 768px)" srcset="./img/shop-visual_tb.png">
-                    <img class="p-single-visual__img" src="./img/shop-visual_sp.png" alt="お店の外観">
+                    <!-- <source media="(min-width: 1025px)" srcset="./img/shop-visual_pc.png">
+                    <source media="(min-width: 768px)" srcset="./img/shop-visual_tb.png"> -->
+                    <img class="p-single-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/shop-visual_sp.png" alt="お店の外観">
                 </picture>
                 <p class="p-single-visual__text font-mplus-700">ショップについて</p>
             </main>
+
+
+<!-- まだwp-pageクラスにスタイルは当ててない -->
+            <div class="wp-page">
+                <?php the_content(); ?>
+            </div> 
+
+
+
 
 
             <div class="p-single__h-area">
@@ -173,5 +182,18 @@
     </div>
             </div>
             </div>
+
+
+
+
+
+    <?php endwhile; ?>
+
+    <?php else: ?>
+
+        <p>記事が見つかりません</p>
+
+    <?php endif; ?>
+
 
 <?php get_footer(); ?>

@@ -186,11 +186,14 @@
 // single.php ========================================
 
 
-//　見出しと本文------------
+//　見出しh2〜h6と本文p------------
 
 .wp-single {
     padding: 20px;
-    color: #3C2A10;
+    color: variables.$color-brown;
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 700;
+    background-color: #FFF7EF;
 
     @include variables.media-tb {
         padding: 60px;
@@ -200,9 +203,8 @@
         padding: 100px 100px 50px 100px;
     }
 
-    .wp-block-heading {
-        font-family: "M PLUS 1p", sans-serif;
-        font-weight: 700;
+
+    h2 {
         font-size: 28px;
 
         @include variables.media-tb {
@@ -210,11 +212,217 @@
         }
     }
 
+
     p {
-        font-family: "M PLUS 1p", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 25px;
         padding-top: 25px;
+
+        @include variables.media-tb {
+            padding-top: 55px;
+        }
+    }
+
+
+    h3 {
+        font-size: 24px;
+        padding-top: 36px;
+
+        @include variables.media-tb {
+            font-size: 28px;
+            padding-top: 62px;
+
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        padding-top: 28px;
+
+        @include variables.media-tb {
+            font-size: 20px;
+            padding-top: 56px;
+        }
+    }
+
+    h5 {
+        font-size: 20px;
+        padding-top: 34px;
+
+        @include variables.media-tb {
+            font-size: 20px;
+            padding-top: 73px;
+        }
+    }
+
+    h6 {
+        font-size: 20px;
+        padding-top: 27px;
+
+        @include variables.media-tb {
+            font-size: 20px;
+            padding-top: 57px;
+        }
+    }
+
+}
+
+//　blockquote　引用エリア------------
+
+
+.wp-block-quote {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+
+    @include variables.media-tb {
+        padding: 60px;
+        margin-top: 60px;
+    }
+
+    @include variables.media-pc {
+        padding: 0 100px 60px 100px;
+    }
+}
+
+.wp-block-group__inner-container {
+    background: #F5F5F5;
+    color: variables.$color-brown;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 20px;
+
+    p {
+        padding-top: 0;
+    }
+
+    @include variables.media-tb {
+        padding: 50px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+
+
+    p:last-child {
+
+        margin-top: 10px;
+
+    }
+}
+
+//　画像とキャプションエリア------------
+
+.wp-block-media-text.is-stacked-on-mobile {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 30px;
+
+    p {
+        padding-top: 0;
+    }
+
+    .wp-block-media-text__media {
+        align-self: flex-start;
+
+        img {
+            height: 89px;
+            width: auto;
+        }
+    }
+
+    .wp-block-media-text__content {
+        padding: 0;
+    }
+}
+
+//　グリッド画像エリア------------
+
+.wp-block-group {
+    flex-direction: column;
+    align-items: center !important;
+}
+
+.wp-block-image {
+    img {
+        padding-bottom: 30px;
+        width: 100%;
+    }
+}
+
+
+//　リストエリア------------
+
+.wp-block-list {
+    font-weight: 400;
+    padding: 20px;
+
+    li {
+        list-style: auto;
+        list-style-position: inside;
+    }
+
+}
+
+ul.wp-block-list {
+    li {
+        list-style: none;
+    }
+}
+
+
+//　コードエリア------------
+
+.wp-block-code {
+    background-color: #F5F5F5;
+    margin-bottom: 20px;
+
+    code {
+        padding: 30px 50px;
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 400;
+        line-height: 25px;
+    }
+}
+
+
+//　表エリア------------
+.wp-block-table {
+    background-color: variables.$color-white;
+    font-weight: 400;
+
+    tr {
+        height: 77px;
+
+        td {
+            padding-left: 23px;
+        }
+
+        td:first-child {
+            width: 140px;
+        }
+
+    }
+}
+
+//　ボタンエリア------------
+
+.wp-block-button {
+    padding: 30px 0;
+    width: 100%;
+
+    .wp-element-button {
+        display: block;
+        margin: 0 auto;
+        height: 81px;
+        width: 100%;
+        border: 1px solid variables.$color-gray;
+        border-radius: 20px;
+        font-size: 16px;
+        color: variables.$color-brown;
+        background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
     }
 }

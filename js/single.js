@@ -1,4 +1,4 @@
-const singleBtn = document.querySelector('.p-single__btn-area__btn');
+const singleBtn = document.querySelector('.wp-element-button');
 
 singleBtn.addEventListener('mouseover', () => {
     singleBtn.classList.add("is-mouseover");
