@@ -82,7 +82,8 @@
     align-items: flex-end;
     height: 127px;
     color: variables.$color-gray;
-    background-color: variables.$color-white3;
+    // background-color: variables.$color-white3;
+    background-color: variables.$color-beige;
     border: none;
     padding: 30px;
 
@@ -277,40 +278,46 @@
     margin-top: 30px;
 
     @include variables.media-tb {
-        padding: 60px;
+        padding: 0;
         margin-top: 60px;
     }
 
     @include variables.media-pc {
-        padding: 0 100px 60px 100px;
+        padding: 0;
     }
 }
 
-.wp-block-group__inner-container {
-    background: #F5F5F5;
-    color: variables.$color-brown;
-    font-size: 16px;
-    line-height: 25px;
-    padding: 20px;
+blockquote {
+    .wp-block-group__inner-container {
+        background: #F5F5F5;
+        color: variables.$color-brown;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 20px;
 
-    p {
-        padding-top: 0;
-    }
+        p {
+            padding-top: 0;
+        }
 
-    @include variables.media-tb {
-        padding: 50px;
-    }
+        @include variables.media-tb {
+            padding: 50px;
+        }
 
-    a {
-        text-decoration: underline;
-    }
+        a {
+            text-decoration: underline;
+        }
 
 
 
-    p:last-child {
+        p:last-child {
 
-        margin-top: 10px;
+            margin-top: 10px;
 
+            @include variables.media-tb {
+                padding-top: 50px;
+            }
+
+        }
     }
 }
 
@@ -320,38 +327,105 @@
     display: flex;
     gap: 10px;
     padding-bottom: 30px;
+    padding-top: 30px;
+
+
+    @include variables.media-tb {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    @include variables.media-pc {
+        gap: 40px;
+    }
 
     p {
         padding-top: 0;
     }
+}
 
-    .wp-block-media-text__media {
-        align-self: flex-start;
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+    align-self: flex-start;
+
+    img {
+        height: 89px;
+        width: auto;
+
+        @include variables.media-tb {
+            height: 189px;
+        }
+
+        @include variables.media-pc {
+            height: 358px;
+        }
+    }
+}
+
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    padding: 0;
+}
+
+
+//　ギャラリーエリア------------
+
+
+.wp-block-image {
+    .aligncenter {
 
         img {
-            height: 89px;
-            width: auto;
+            width: 100%;
+
+            @include variables.media-tb {
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
+
+
+figure.wp-block-gallery {
+    flex-direction: column;
+    align-items: center !important;
+    padding-bottom: 30px;
+
+
+    @include variables.media-tb {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+
+    @include variables.media-pc {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px !important;
+    }
+
+    figure.wp-block-image {
+        width: auto !important;
+
+        @include variables.media-tb {
+            height: 216px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+
+        @include variables.media-tb {
+            margin-top: 0;
         }
     }
 
-    .wp-block-media-text__content {
-        padding: 0;
-    }
 }
 
-//　グリッド画像エリア------------
 
-.wp-block-group {
-    flex-direction: column;
-    align-items: center !important;
-}
 
-.wp-block-image {
-    img {
-        padding-bottom: 30px;
-        width: 100%;
-    }
-}
 
 
 //　リストエリア------------
@@ -380,6 +454,11 @@ ul.wp-block-list {
     background-color: #F5F5F5;
     margin-bottom: 20px;
 
+    @include variables.media-tb {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
     code {
         padding: 30px 50px;
         font-family: "M PLUS 1p", sans-serif;
@@ -403,6 +482,14 @@ ul.wp-block-list {
 
         td:first-child {
             width: 140px;
+
+            @include variables.media-tb {
+                width: 210px;
+            }
+
+            @include variables.media-pc {
+                width: 429px;
+            }
         }
 
     }
@@ -414,6 +501,10 @@ ul.wp-block-list {
     padding: 30px 0;
     width: 100%;
 
+    @include variables.media-tb {
+        padding: 60px 0;
+    }
+
     .wp-element-button {
         display: block;
         margin: 0 auto;
@@ -424,5 +515,97 @@ ul.wp-block-list {
         font-size: 16px;
         color: variables.$color-brown;
         background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
+
+        @include variables.media-tb {
+            margin: 0;
+            height: 104px;
+            width: 429px;
+        }
     }
+}
+
+
+// page.php ========================================
+
+
+.wp-page {
+    padding: 20px;
+    color: variables.$color-brown;
+    background-color: variables.$color-beige;
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 700;
+
+
+    @include variables.media-tb {
+        padding: 80px;
+    }
+
+    @include variables.media-pc {
+        padding: 100px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        padding-top: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+
+        @include variables.media-tb {
+            font-size: 36px;
+        }
+    }
+
+
+    h3 {
+        font-size: 24px;
+        padding-top: 36px;
+
+        @include variables.media-tb {
+            font-size: 28px;
+            padding-top: 62px;
+
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        padding-top: 28px;
+
+        @include variables.media-tb {
+            font-size: 20px;
+            padding-top: 56px;
+        }
+    }
+
+    h5 {
+        font-size: 20px;
+        padding-top: 34px;
+
+        @include variables.media-tb {
+            font-size: 20px;
+            padding-top: 73px;
+        }
+    }
+
+    h6 {
+        font-size: 20px;
+        padding-top: 27px;
+
+        @include variables.media-tb {
+            font-size: 20px;
+            padding-top: 57px;
+        }
+    }
+}
+
+
+// 404.php ========================================
+
+p {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
 }

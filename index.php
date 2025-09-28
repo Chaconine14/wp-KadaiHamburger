@@ -6,7 +6,6 @@
         <?php the_excerpt(); ?>
     <?php endwhile; endif; ?>
 </main>
-    <!-- このdiv閉じタグ二つを足しています -->
             </div>
             </div>
 

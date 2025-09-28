@@ -63,8 +63,7 @@
 
         <?php wp_pagenavi(); ?>
     </main>
-        <!-- このdiv閉じタグ二つを足しています -->
-            </div>
-            </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>
