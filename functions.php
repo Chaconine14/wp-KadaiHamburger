@@ -17,7 +17,6 @@
         wp_enqueue_script( 'linkjs', get_theme_file_uri ( '/js/link.js' ), array(), '1.0.0', true );
         wp_enqueue_script( 'singlejs', get_theme_file_uri ( '/js/single.js' ), array(), '1.0.0', true );
 
-        
 
     }
 
@@ -38,3 +37,12 @@
 //　アイキャッチ画像の有効化
 
     add_theme_support('post-thumbnails');
+
+
+// テーマチェック通過用
+
+function mytheme_setup() {
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'automatic-feed-links' );
+}
+add_action( 'after_setup_theme', 'mytheme_setup' );

@@ -2,8 +2,10 @@
     <!-- まずは投稿があるかチェック -->
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
+        
 
-
+    <!-- 投稿全体のコンテナ -->
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <main class="p-single-visual">
 
             <picture>
@@ -33,8 +35,10 @@
             <?php the_content(); ?>
         </div>
 
+        <?php wp_link_pages(); ?>
 
 
+    </article><!-- /post -->
     </div>
     </div>
     </div>
