@@ -3,9 +3,9 @@
 
                 <!-- sp: 〜767px / tb: 768〜1024px / pc: 1025px〜 -->
                 <picture>
-                    <source media="(min-width: 1025px)" srcset="<?php echo get_template_directory_uri(); ?>/img/mainvisual-pc.png">
-                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/mainvisual-tb.jpg">
-                    <img class="p-main-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/mainvisual-sp@2x.jpg" alt="テーブル上のハンバーガーや野菜たち">                
+                    <source media="(min-width: 1025px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/img/mainvisual-pc.png">
+                    <source media="(min-width: 768px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/img/mainvisual-tb.jpg">
+                    <img class="p-main-visual__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/mainvisual-sp@2x.jpg" alt="テーブル上のハンバーガーや野菜たち">                
                 </picture>
                 <p class="p-main-visual__text font-mplus-700">ダミーサイト</p>
             </main>
@@ -13,7 +13,7 @@
 
             <article class="p-main-card">
 
-                <div class="p-main-card__takeout" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/takeout_back.png');">
+                <div class="p-main-card__takeout" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/img/takeout_back.png');">
                     <h2 class="p-main-card__title font-mplus-700">Take Out</h2>
                     <div class="p-whitebox__wrap">
                         <div class="p-whitebox">
@@ -32,7 +32,7 @@
 
                 </div>
 
-                 <div class="p-main-card__eatin" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/eatin_back.png');">
+                 <div class="p-main-card__eatin" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/img/eatin_back.png');">
                     <h2 class="p-main-card__title font-mplus-700">Eat In</h2>
                     <div class="p-whitebox__wrap">
                         <div class="p-whitebox">
@@ -52,7 +52,7 @@
                 </div>
             </article>
 
-            <section class="p-main-map" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/map-img.png');">
+            <section class="p-main-map" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/img/map-img.png');">
                <div class="p-main-map__back__white">
                     <div class="p-main-map__back__black">
                         <div class="p-main-map__wrap">

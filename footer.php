@@ -1,4 +1,4 @@
-<footer class="l-footer" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/footer-layer.png');">
+<footer class="l-footer" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/img/footer-layer.png');">
 
  <?php
 wp_nav_menu( array(

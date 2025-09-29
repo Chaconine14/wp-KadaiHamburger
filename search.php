@@ -5,9 +5,9 @@
         <div class="p-archive-visual">
 
             <picture>
-                <source media="(min-width: 1025px)" srcset="<?php echo get_template_directory_uri(); ?>/img/archive-visual-pc.png">
-                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/archive-visual-tb.png">
-                <img class="p-archive-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/archive-main-visual-sp.png" alt="ハンバーガーの拡大写真">
+                <source media="(min-width: 1025px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/img/archive-visual-pc.png">
+                <source media="(min-width: 768px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/img/archive-visual-tb.png">
+                <img class="p-archive-visual__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/archive-main-visual-sp.png" alt="ハンバーガーの拡大写真">
             </picture>
                 <div class="p-archive-visual__textwrap">
                 <h2 class="p-archive-visual__title font-roboto">Search:</h2>
@@ -41,7 +41,7 @@
                             src="<?php echo esc_url( $thumbnail_url ); ?>" 
                             alt="<?php echo esc_attr( $alt ); ?>">
                     <?php else: ?>
-                        <img class="p-archive__card-area__img" src="<?php echo get_template_directory_uri(); ?>/img/noimage.png" alt="no imageという文字">
+                        <img class="p-archive__card-area__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/noimage.png" alt="no imageという文字">
                     <?php endif; ?>
 
                 </picture>

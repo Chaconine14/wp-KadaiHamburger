@@ -4,7 +4,7 @@
 
             <main class="p-single-visual">
                 <picture>
-                    <img class="p-single-visual__img" src="<?php echo get_template_directory_uri(); ?>/img/shop-visual_sp.png" alt="お店の外観">
+                    <img class="p-single-visual__img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/shop-visual_sp.png" alt="お店の外観">
                 </picture>
                 <p class="p-single-visual__text font-mplus-700">ショップについて</p>
             </main>

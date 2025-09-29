@@ -876,6 +876,11 @@ ul.wp-block-list li {
   }
 }
 
+p {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+}
+
 .l-main-area {
   display: flex;
   flex-direction: column;
