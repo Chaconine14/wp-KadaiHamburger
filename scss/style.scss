@@ -1,11 +1,11 @@
 //===============================================
 //Foundation
 //===============================================
+
 @use "foundation/reset";
 @use "foundation/variables";
 @use "foundation/base";
 @use "foundation/wp";
-
 
 //===============================================
 //Layout
@@ -15,7 +15,6 @@
 @use "layout/header";
 @use "layout/footer";
 @use "layout/archive";
-
 
 //===============================================
 //Object
@@ -28,7 +27,6 @@
 @use "object/component/menu-btn-sptb";
 @use "object/component/icon";
 
-
 //-------------------------------
 //Project
 //-------------------------------
@@ -38,7 +36,6 @@
 @use "object/project/side-menu";
 @use "object/project/footer-link";
 @use "object/project/page-num";
-
 
 //-main-----------
 @use "object/project/main/main-visual";
@@ -53,16 +50,3 @@
 
 //-single-----------
 @use "object/project/single/single-visual";
-@use "object/project/single/caption";
-@use "object/project/single/single-img";
-@use "object/project/single/list";
-@use "object/project/single/code";
-@use "object/project/single/table";
-@use "object/project/single/single-btn";
-@use "object/project/single/single-b";
-
-
-
-//-------------------------------
-//Utility
-//-------------------------------

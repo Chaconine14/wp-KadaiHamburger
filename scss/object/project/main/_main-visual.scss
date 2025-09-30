@@ -1,12 +1,10 @@
 @use "../../../foundation/variables";
 
 .p-main-visual {
-
     position: relative;
     z-index: 1;
     width: 100%;
     height: 285px;
-
 
     @include variables.media-tb {
         width: 100vw;
@@ -17,16 +15,13 @@
         height: 530px;
     }
 
-
     &__img {
-
         width: 100%;
         height: 100%;
         display: block;
         object-fit: cover;
     }
 }
-
 
 .p-main-visual__text {
     position: absolute;
@@ -38,14 +33,11 @@
 
     @include variables.media-tb {
         left: 10%;
-
     }
 
     @include variables.media-pc {
         font-size: 40px;
         top: 234px;
         left: 86px;
-
     }
-
 }

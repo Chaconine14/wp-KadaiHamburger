@@ -1,14 +1,12 @@
 @use "../../../foundation/variables";
 
 .p-whitebox__wrap {
-
     display: flex;
     flex-direction: column;
     flex-shrink: 0; // 下に寄せたいなら追加
     margin-top: auto; // ←これでも下寄せ効果ある
     gap: 16px;
 }
-
 
 .p-whitebox {
     background-color: rgba(255, 255, 255, 0.8);
@@ -17,8 +15,6 @@
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-
     height: 100%;
     margin: 0;
-
 }

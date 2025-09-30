@@ -1,7 +1,5 @@
 @use "../../foundation/variables";
 
-
-
 .c-container {
     @include variables.media-pc {
         display: flex;
@@ -11,7 +9,6 @@
         align-items: stretch;
     }
 }
-
 
 .c-container::before {
     content: '';
@@ -26,13 +23,11 @@
     visibility: hidden;
     transition: opacity 0.3s ease; //フェードイン！
 
-
     @include variables.media-pc {
         display: none;
         visibility: visible;
     }
 }
-
 
 .c-container.is-open::before {
     opacity: 1;

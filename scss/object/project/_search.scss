@@ -7,7 +7,6 @@
     margin: 0 3%;
 }
 
-
 .p-search__btn {
     background: linear-gradient(to left, #F2EDE9, #DED8D3);
     color: variables.$color-gray;
@@ -20,19 +19,15 @@
     margin: 0 0 0 12px;
 
     @include variables.media-tb {
-
         min-width: 8vw;
         max-width: 80px;
     }
-
-
 }
 
 .p-search__btn:hover {
     background: darkgray;
     color: variables.$color-white2;
     transition: 0.3s;
-
 }
 
 .p-search__input {
@@ -40,25 +35,18 @@
     border-radius: 10px;
     height: 46px;
     width: 216px;
-
     margin: 0;
     background: url(../../../img/search-icon.png)no-repeat 5px center;
     background-color: variables.$color-white;
     padding: 0 10px 0 35px;
 
-
     @include variables.media-tb {
-
         min-width: 25vw;
         max-width: 200px;
     }
-
-
 }
-
 
 .p-search__form {
     display: flex;
     flex-wrap: nowrap;
-
 }

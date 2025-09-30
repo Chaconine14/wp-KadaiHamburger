@@ -51,8 +51,6 @@
     }
 }
 
-
-
 .p-archive-visual__title {
     font-size: 36px;
     color: variables.$color-white;
@@ -71,7 +69,6 @@
     }
 }
 
-
 .p-archive-visual__text {
     top: 160px;
     font-size: 16px;
@@ -86,11 +83,9 @@
         position: static;
         margin: 19px;
         padding: 0;
-
     }
 
     @include variables.media-pc {
         font-size: 16px;
-
     }
 }

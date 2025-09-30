@@ -1,22 +1,15 @@
 @use "../../../foundation/variables";
 
-
-
 .p-main-card {
     background-color: variables.$color-beige;
 
     @include variables.media-tb {
-
         display: flex;
-
-
     }
-
 }
 
-
-.p-main-card__takeout {
-    background: url(../../../../img/takeout_back.png);
+.p-main-card__takeout,
+.p-main-card__eatin {
     flex: 1;
     margin: 20px;
     width: auto;
@@ -27,49 +20,33 @@
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
-
     justify-content: flex-end;
 
+    @include variables.media-pc {
+        margin: 8%;
+        height: 1197px;
+        width: auto;
+    }
+}
+
+.p-main-card__takeout {
     @include variables.media-tb {
         margin: 40px 20px 40px 40px;
     }
 
     @include variables.media-pc {
-        margin: 8%;
         margin-right: 4%;
-        height: 1197px;
-        width: auto;
-
     }
-
 }
 
-
 .p-main-card__eatin {
-    background: url(../../../../img/eatin_back.png);
-    flex: 1;
-    margin: 20px;
-    width: auto;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    justify-content: flex-end;
-
     @include variables.media-tb {
         margin: 40px 40px 40px 20px;
     }
 
     @include variables.media-pc {
-        margin: 8%;
         margin-left: 4%;
-        height: 1197px;
-        width: auto;
     }
-
 }
 
 
@@ -92,7 +69,6 @@
     }
 }
 
-
 .p-main-card__title::after {
     width: 33.89px;
     height: 4px;
@@ -105,7 +81,6 @@
     @include variables.media-tb {
         margin-bottom: 250px;
     }
-
 }
 
 
@@ -134,5 +109,4 @@
     @include variables.media-pc {
         font-size: 16px;
     }
-
 }

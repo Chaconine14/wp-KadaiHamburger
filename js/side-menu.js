@@ -8,15 +8,17 @@ menuBtn.addEventListener('click', () => {
     if (sideMenu.classList.contains("is-close")) {
         sideMenu.classList.remove("is-close");
         sideMenu.classList.add("is-open");
+
         menuText.style.display = 'none';
         closeIcon.style.display = 'inline-block'; // spanなのでこれ
 
         overlay.classList.add('is-open');
-        document.body.classList.add('no-scroll'); // 背景は固定
+        document.body.classList.add('no-scroll'); // 背景は固定に
 
     } else {
         sideMenu.classList.remove("is-open");
         sideMenu.classList.add("is-close");
+
         menuText.style.display = 'inline';
         closeIcon.style.display = 'none';
 

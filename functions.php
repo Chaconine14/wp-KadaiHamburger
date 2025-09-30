@@ -13,14 +13,12 @@
         wp_enqueue_style( 'kadaihamburger-kadaihamburger', get_theme_file_uri ( '/css/style.css' ), array(), '1.0.0' );
         wp_enqueue_style( 'kadaihamburger-style', get_theme_file_uri ( '/style.css' ), array(), '1.0.0' );
 
-        wp_enqueue_script( 'mainjs', get_theme_file_uri ( '/js/main.js' ), array(), '1.0.0', true );
-        wp_enqueue_script( 'linkjs', get_theme_file_uri ( '/js/link.js' ), array(), '1.0.0', true );
-        wp_enqueue_script( 'singlejs', get_theme_file_uri ( '/js/single.js' ), array(), '1.0.0', true );
-
-
+        wp_enqueue_script( 'side-menu_js', get_theme_file_uri ( '/js/side-menu.js' ), array(), '1.0.0', true );
+        wp_enqueue_script( 'mouse-over_js', get_theme_file_uri ( '/js/mouse-over.js' ), array(), '1.0.0', true );
     }
 
     add_action( 'wp_enqueue_scripts', 'kadaihamburger_script' );
+
 
 // メニューの登録
     function kadaihamburger_register_menus() {
@@ -35,12 +33,10 @@
 
 
 //　アイキャッチ画像の有効化
-
     add_theme_support('post-thumbnails');
 
 
 // テーマチェック通過用
-
 function mytheme_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'automatic-feed-links' );

@@ -1,7 +1,5 @@
 @use "../../../foundation/variables";
 
-
-
 .p-main-map {
     height: auto;
     width: auto;
@@ -10,15 +8,8 @@
     background-position: center;
     background-repeat: no-repeat;
 
-
     @include variables.media-tb {
         margin-top: 0;
-        height: auto;
-    }
-
-    @include variables.media-pc {
-        margin-top: 0;
-        height: auto;
     }
 }
 
@@ -26,23 +17,11 @@
     padding: 42px;
 }
 
-
-
 .p-main-map__back {
-
     &__white {
         background-color: rgba(0, 0, 0, 0.4);
         height: auto;
         width: auto;
-
-        @include variables.media-tb {
-            height: auto;
-        }
-
-        @include variables.media-pc {
-            height: auto;
-        }
-
     }
 
     &__black {
@@ -50,7 +29,6 @@
         height: auto;
 
         @include variables.media-pc {
-            height: auto;
             width: 60%;
         }
     }
@@ -78,7 +56,6 @@
         margin: 8%;
     }
 }
-
 
 .p-main-map__title::after {
     display: block;

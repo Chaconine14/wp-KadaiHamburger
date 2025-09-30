@@ -1,7 +1,5 @@
 @use "../../foundation/variables";
 
-
-
 .c-menu-btn__sptb {
     color: variables.$color-gray;
     font-size: 20px;
@@ -12,11 +10,9 @@
     z-index: 6;
 
     @include variables.media-tb {
-
         font-size: 170%;
         top: 20px;
         right: 25px;
-
     }
 
     @include variables.media-pc {

@@ -1,10 +1,8 @@
 @use "../../../foundation/variables";
 
-
 .p-archive__text-area {
     color: variables.$color-brown;
     margin: 22px;
-
 
     @include variables.media-tb {
         margin: 0 40px;
@@ -22,12 +20,10 @@
     @include variables.media-tb {
         font-size: 36px;
         padding-top: 40px;
-
     }
 
     @include variables.media-pc {
         padding-top: 0;
-
     }
 }
 
@@ -37,7 +33,5 @@
 
     @include variables.media-pc {
         padding-bottom: 0;
-
     }
-
 }

@@ -1,14 +1,11 @@
 @use "../foundation/variables";
 
 .l-main-area {
-    // background-color: variables.$color-white3;
     display: flex;
     flex-direction: column;
     background-color: variables.$color-beige;
 
-
     @include variables.media-pc {
         flex: 1;
-
     }
 }

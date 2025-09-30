@@ -11,8 +11,6 @@ for (const btn of pageNum) {
     });
 }
 
-
-
 const cardBtn = document.querySelectorAll('.p-archive__card-area__btn');
 
 for (const btn of cardBtn) {
@@ -24,3 +22,14 @@ for (const btn of cardBtn) {
         btn.classList.remove("is-mouseover");
     });
 }
+
+// singleページのボタン
+const singleBtn = document.querySelector('.wp-element-button');
+
+singleBtn.addEventListener('mouseover', () => {
+    singleBtn.classList.add("is-mouseover");
+});
+
+singleBtn.addEventListener('mouseleave', () => {
+    singleBtn.classList.remove("is-mouseover");
+});

@@ -13,7 +13,6 @@
 
     @include variables.media-pc {
         padding: 0 100px;
-
     }
 
     &__card {
@@ -26,11 +25,9 @@
             padding: 20px 40px;
             margin: 0;
             width: 100%;
-
         }
 
         @include variables.media-pc {
-            margin: 0;
             margin-bottom: 30px;
         }
     }
@@ -45,8 +42,6 @@
             width: 50%;
             display: flex;
         }
-
-
     }
 
     &__img {
@@ -55,17 +50,13 @@
         display: block;
         object-fit: cover;
 
-
         @include variables.media-tb {
             height: auto;
-            width: 100%;
             margin: 0;
             max-width: 100%;
             box-sizing: border-box;
         }
-
     }
-
 
     &__text-wrap {
         background-color: variables.$color-brown;
@@ -84,31 +75,24 @@
 
         @include variables.media-pc {
             padding: 56px 56px 0 56px;
-
         }
     }
-
 
     &__h2 {
         font-size: 20px;
         padding-top: 15px;
-
-
         margin-top: 0;
         margin-bottom: 0;
-
 
         @include variables.media-pc {
             font-size: 36px;
             line-height: normal;
         }
-
     }
 
     &__h3 {
         font-size: 16px;
         padding: 21px 0 7px 0;
-
         margin-top: 0;
         margin-bottom: 0;
 
@@ -117,8 +101,6 @@
         }
     }
 
-
-
     &__btn {
         font-size: 16px;
         background-color: variables.$color-white;
@@ -126,12 +108,10 @@
         width: 163px;
         height: 42px;
         margin: 30px auto;
-
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-
         margin-top: auto; // 上にある要素（h2, h3, p）との間を押し広げる
         margin-bottom: auto; // 下にも自動でスペースを作って、上下中央に寄せる
 
@@ -139,7 +119,6 @@
             width: 292px;
             min-height: 76px;
             border-radius: 50px;
-
         }
 
         &.is-mouseover {
@@ -147,8 +126,6 @@
             color: variables.$color-white;
             transition: 0.3s;
         }
-
-
     }
 
     &__btn-area {
@@ -161,7 +138,5 @@
             height: 100%;
             min-height: 150px;
         }
-
-
     }
 }

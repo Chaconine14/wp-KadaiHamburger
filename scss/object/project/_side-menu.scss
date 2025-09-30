@@ -1,7 +1,5 @@
 @use "../../foundation/variables";
 
-
-
 .p-side-menu {
     position: fixed;
     top: 0;
@@ -42,7 +40,6 @@
     }
 }
 
-
 .p-side-menu__li__wrap {
     position: absolute;
     top: 178px;
@@ -53,7 +50,6 @@
         padding-top: 178px;
     }
 }
-
 
 .p-side-menu__title {
     display: none;
@@ -86,6 +82,5 @@ body.no-scroll {
     @include variables.media-pc {
         position: relative;
         overflow-y: auto;
-
     }
 }

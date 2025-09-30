@@ -7,6 +7,5 @@
         'container'      => false,
     ) );
     ?>
-
 </nav>
 
