@@ -21,12 +21,6 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     justify-content: flex-end;
-
-    @include variables.media-pc {
-        margin: 8%;
-        height: 1197px;
-        width: auto;
-    }
 }
 
 .p-main-card__takeout {
@@ -35,7 +29,10 @@
     }
 
     @include variables.media-pc {
+        margin: 8%;
         margin-right: 4%;
+        height: 1197px;
+        width: auto;
     }
 }
 
@@ -45,7 +42,10 @@
     }
 
     @include variables.media-pc {
+        margin: 8%;
         margin-left: 4%;
+        height: 1197px;
+        width: auto;
     }
 }
 

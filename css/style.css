@@ -1357,14 +1357,6 @@ body.no-scroll {
   box-sizing: border-box;
   justify-content: flex-end;
 }
-@media (min-width: 1025px) {
-  .p-main-card__takeout,
-.p-main-card__eatin {
-    margin: 8%;
-    height: 1197px;
-    width: auto;
-  }
-}
 
 @media (min-width: 768px) {
   .p-main-card__takeout {
@@ -1373,7 +1365,10 @@ body.no-scroll {
 }
 @media (min-width: 1025px) {
   .p-main-card__takeout {
+    margin: 8%;
     margin-right: 4%;
+    height: 1197px;
+    width: auto;
   }
 }
 
@@ -1384,7 +1379,10 @@ body.no-scroll {
 }
 @media (min-width: 1025px) {
   .p-main-card__eatin {
+    margin: 8%;
     margin-left: 4%;
+    height: 1197px;
+    width: auto;
   }
 }
 
