@@ -1,10 +1,39 @@
 
-Theme Name: KadaiHamburger
-Description: ハンバーガーのサイトです
-Version: 1.0.0
-Author: sae
-Author URI: https://github.com/Chaconine14
-Tags: right-sidebar, blog
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: kadaihamburger
+# 架空のハンバーガーサイト（RaiseTech課題）
+
+## 概要
+RaiseTechの上級課題として制作した、WordPress対応の架空ハンバーガーショップサイトです。  
+コーディングからWordPressテーマ化、そしてサーバーへのデプロイまで、実務に近い一連の流れを経験しました。
+
+---
+
+## 制作期間
+4ヶ月
+
+---
+
+## 使用スキル
+- HTML  
+- CSS / Sass  
+- JavaScript / jQuery  
+- PHP  
+
+---
+
+## 使用ツール
+- Visual Studio Code  
+- Figma  
+- WordPress  
+- Local  
+- FileZilla  
+- GitHub  
+
+---
+
+## コメント
+この作品では、FLOCSS設計を初めて導入し、コードの整理や再利用性を意識した構成を心がけました。  
+ブロックエディタを用いたデザイン調整や、functions.phpを通じた機能追加など、**お客様が操作することを想定** して設計しています。
+
+また、サーバーへのデプロイを通して「Webサイトがどのような仕組みで動いているのか」を体験的に理解できました。  
+見た目を作るだけでなく、“運用する人の目線で考えることの大切さ”を学んだ作品です。
+
